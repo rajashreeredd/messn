@@ -3,21 +3,44 @@
 //////////////////////
 const starters = JSON.parse(
 	"[" +
-		'{ "type":"separator", "description":"MAIN COURSE" },' +
+		'{ "type":"separator", "description":"BREAKFAST" },' +
 		'{ "type":"food", "name":"DOSA", "description":"rice batter with vegetables and  fries", "price":"48 kcal" },' +
 		'{ "type":"food", "name":"POTATO FRY", "description":"with café de paris herbs butter, fries and vegetables", "price":"35 kcal" },' +
 		'{ "type":"separator", "description":"EGGS & BREAD" },' +
 		'{ "type":"food", "name":"EGG SCRAMBLE", "description":"on spinach sauce with cherry tomatoes, fennel, feta and pine nuts", "price":"25 kcal" },' +
         '{ "type":"food", "name":"FRUIT JAM", "description":"", "price":"25 kcal" },' +
         '{ "type":"food", "name":"BUTTER", "description":"", "price":"25 kcal" },' +
-		'{ "type":"food", "name":"BREAD TOAST", "description":"", "price":"28 kcal" } ]'
-);
-const mains = JSON.parse(
-	"[" +
-		'{ "type":"separator", "description":"CURRY" },' +
+		'{ "type":"separator", "description":"LUNCH" },' +
 		'{ "type":"food", "name":"BUTTER CHICKEN", "description":"Tomato sauce, mozzarella, organic oregano", "price":"100 kcal" },' +
 		'{ "type":"food", "name":"SAMBAR", "description":"Tomato sauce, mozzarella, ham, organic oregano", "price":"50 kcal" },' +
 		'{ "type":"food", "name":"CARROT CURRY", "description":"Tomato sauce, mozzarella, salami, organic oregano", "price":"80 kcal" },' +
+		'{ "type":"food", "name":"RASAM", "description":"Tomato sauce, mozzarella, tuna MSC, capers, organic oregano", "price":"90 kcal" },' +
+		'{ "type":"separator", "description":"RICE" },' +
+		'{ "type":"food", "name":"WHITE RICE", "description":"Beef entrecôte with herb butter, vegetables and  fries", "price":"100 kcal" },' +
+		'{ "type":"food", "name":"GHEE RICE", "description":"with café de paris herbs butter, fries and vegetables", "price":"120 kcal" },' +
+		'{ "type":"separator", "description":"DINNER" },' +
+    '{ "type":"food", "name":"BUTTER MALAI", "description":"Tomato sauce, mozzarella, organic oregano", "price":"100 kcal" },' +
+    '{ "type":"food", "name":"SAMBAR", "description":"Tomato sauce, mozzarella, ham, organic oregano", "price":"50 kcal" },' +
+    '{ "type":"food", "name":"MIXED VEG", "description":"Tomato sauce, mozzarella, salami, organic oregano", "price":"80 kcal" },' +
+    '{ "type":"food", "name":"RASAM", "description":"Tomato sauce, mozzarella, tuna MSC, capers, organic oregano", "price":"90 kcal" },' +
+    '{ "type":"separator", "description":"RICE" },' +
+		'{ "type":"food", "name":"WHITE RICE", "description":"", "price":"100 kcal" },' +
+		'{ "type":"separator", "description":"SWEETS" },' +
+		'{ "type":"food", "name":"MALAI JALEBI", "description":"with star anise, a pecan brownie and salty caramel sauce", "price":"90 kcal" },' +
+		'{ "type":"food", "name":"ICE CREAM", "description":"rolled rhubarb pistachio with vanilla strawberry amaretto sauce", "price":"13 kcal" },' +
+		'{ "type":"separator", "description":"SNACKS" },' +
+		'{ "type":"drink", "name":"SAMOSA", "description":"", "price":"40 kcal" },' +
+		'{ "type":"drink", "name":"COFFEE", "description":"", "price":"55 kcal" },' +
+        '{ "type":"drink", "name":"MILK", "description":"", "price":"35 kcal" },' +
+
+		'{ "type":"food", "name":"BREAD TOAST", "description":"", "price":"28 kcal" }  ]'
+);
+const mains = JSON.parse(
+	"[" +
+		'{ "type":"separator", "description":"BREAKFAST" },' +
+		'{ "type":"food", "name":"RAVA UPMA", "description":"Tomato sauce, mozzarella, organic oregano", "price":"100 kcal" },' +
+		'{ "type":"food", "name":"CHUTNEY", "description":"Tomato sauce, mozzarella, ham, organic oregano", "price":"50 kcal" },' +
+		'{ "type":"food", "name":"SAMBAR", "description":"Tomato sauce, mozzarella, salami, organic oregano", "price":"80 kcal" },' +
 		'{ "type":"food", "name":"RASAM", "description":"Tomato sauce, mozzarella, tuna MSC, capers, organic oregano", "price":"90 kcal" },' +
 		'{ "type":"separator", "description":"RICE" },' +
 		'{ "type":"food", "name":"WHITE RICE", "description":"Beef entrecôte with herb butter, vegetables and  fries", "price":"100 kcal" },' +
@@ -28,8 +51,8 @@ const mains = JSON.parse(
 );
 const desserts = JSON.parse(
 	"[" +
-    '{ "type":"separator", "description":"CURRY" },' +
-    '{ "type":"food", "name":"BUTTER MALAI", "description":"Tomato sauce, mozzarella, organic oregano", "price":"100 kcal" },' +
+    '{ "type":"separator", "description":"BREAKFAST" },' +
+    '{ "type":"food", "name":"IDLY", "description":"Tomato sauce, mozzarella, organic oregano", "price":"100 kcal" },' +
     '{ "type":"food", "name":"SAMBAR", "description":"Tomato sauce, mozzarella, ham, organic oregano", "price":"50 kcal" },' +
     '{ "type":"food", "name":"MIXED VEG", "description":"Tomato sauce, mozzarella, salami, organic oregano", "price":"80 kcal" },' +
     '{ "type":"food", "name":"RASAM", "description":"Tomato sauce, mozzarella, tuna MSC, capers, organic oregano", "price":"90 kcal" },' +
@@ -42,7 +65,71 @@ const desserts = JSON.parse(
 );
 const drinks = JSON.parse(
 	"[" +
+	'{ "type":"separator", "description":"BREAKFAST" },' +
+		'{ "type":"food", "name":"PAV BHAJI", "description":"Tomato sauce, mozzarella, organic oregano", "price":"100 kcal" },' +
+		'{ "type":"food", "name":"MIXED VEG CURRY", "description":"Tomato sauce, mozzarella, ham, organic oregano", "price":"50 kcal" },' +
+		'{ "type":"food", "name":"COCONUT CURRY", "description":"Tomato sauce, mozzarella, salami, organic oregano", "price":"80 kcal" },' +
+		'{ "type":"food", "name":"RASAM", "description":"Tomato sauce, mozzarella, tuna MSC, capers, organic oregano", "price":"90 kcal" },' +
+		'{ "type":"separator", "description":"RICE" },' +
+		'{ "type":"food", "name":"WHITE RICE", "description":"Beef entrecôte with herb butter, vegetables and  fries", "price":"100 kcal" },' +
+		'{ "type":"food", "name":"GHEE RICE", "description":"with café de paris herbs butter, fries and vegetables", "price":"120 kcal" },' +
+		'{ "type":"separator", "description":"DESSERT" },' +
+		'{ "type":"food", "name":"FRUIT SALAD", "description":"on spinach sauce with cherry tomatoes, fennel, feta and pine nuts", "price":"20 kcal" },' +
     '{ "type":"drink", "name":"SAMOSA", "description":"", "price":"35 kcal" },' +
+		'{ "type":"drink", "name":"COFFEE", "description":"", "price":"40 kcal" },' +
+		'{ "type":"drink", "name":"ENERGY DRINKS", "description":"", "price":"55 kcal" },' +
+        '{ "type":"drink", "name":"MILK", "description":"", "price":"35 kcal" },' +
+		'{ "type":"drink", "name":"TEA", "description":"", "price":"20 kcal" } ]'
+);
+const Friday = JSON.parse(
+	"[" +
+	'{ "type":"separator", "description":"BREAKFAST" },' +
+		'{ "type":"food", "name":"VADA PAV", "description":"Tomato sauce, mozzarella, organic oregano", "price":"100 kcal" },' +
+		'{ "type":"food", "name":"CHUTNEY", "description":"Tomato sauce, mozzarella, ham, organic oregano", "price":"50 kcal" },' +
+		'{ "type":"food", "name":"CARROT CURRY", "description":"Tomato sauce, mozzarella, salami, organic oregano", "price":"80 kcal" },' +
+		'{ "type":"food", "name":"RASAM", "description":"Tomato sauce, mozzarella, tuna MSC, capers, organic oregano", "price":"90 kcal" },' +
+		'{ "type":"separator", "description":"RICE" },' +
+		'{ "type":"food", "name":"WHITE RICE", "description":"Beef entrecôte with herb butter, vegetables and  fries", "price":"100 kcal" },' +
+		'{ "type":"food", "name":"GHEE RICE", "description":"with café de paris herbs butter, fries and vegetables", "price":"120 kcal" },' +
+		'{ "type":"separator", "description":"DESSERT" },' +
+		'{ "type":"food", "name":"FRUIT SALAD", "description":"on spinach sauce with cherry tomatoes, fennel, feta and pine nuts", "price":"20 kcal" },' +
+    '{ "type":"drink", "name":"VEG ROLL", "description":"", "price":"35 kcal" },' +
+		'{ "type":"drink", "name":"COFFEE", "description":"", "price":"40 kcal" },' +
+		'{ "type":"drink", "name":"ENERGY DRINKS", "description":"", "price":"55 kcal" },' +
+        '{ "type":"drink", "name":"MILK", "description":"", "price":"35 kcal" },' +
+		'{ "type":"drink", "name":"TEA", "description":"", "price":"20 kcal" } ]'
+);
+const Saturday = JSON.parse(
+	"[" +
+	'{ "type":"separator", "description":"BREAKFAST" },' +
+		'{ "type":"food", "name":"POORI", "description":"Tomato sauce, mozzarella, organic oregano", "price":"100 kcal" },' +
+		'{ "type":"food", "name":"CHOLE", "description":"Tomato sauce, mozzarella, ham, organic oregano", "price":"50 kcal" },' +
+		'{ "type":"food", "name":"CARROT CURRY", "description":"Tomato sauce, mozzarella, salami, organic oregano", "price":"80 kcal" },' +
+		'{ "type":"food", "name":"RASAM", "description":"Tomato sauce, mozzarella, tuna MSC, capers, organic oregano", "price":"90 kcal" },' +
+		'{ "type":"separator", "description":"RICE" },' +
+		'{ "type":"food", "name":"WHITE RICE", "description":"Beef entrecôte with herb butter, vegetables and  fries", "price":"100 kcal" },' +
+		'{ "type":"food", "name":"GHEE RICE", "description":"with café de paris herbs butter, fries and vegetables", "price":"120 kcal" },' +
+		'{ "type":"separator", "description":"DESSERT" },' +
+		'{ "type":"food", "name":"FRUIT SALAD", "description":"on spinach sauce with cherry tomatoes, fennel, feta and pine nuts", "price":"20 kcal" },' +
+    '{ "type":"drink", "name":"BONDA", "description":"", "price":"35 kcal" },' +
+		'{ "type":"drink", "name":"COFFEE", "description":"", "price":"40 kcal" },' +
+		'{ "type":"drink", "name":"ENERGY DRINKS", "description":"", "price":"55 kcal" },' +
+        '{ "type":"drink", "name":"MILK", "description":"", "price":"35 kcal" },' +
+		'{ "type":"drink", "name":"TEA", "description":"", "price":"20 kcal" } ]'
+);
+const Sunday = JSON.parse(
+	"[" +
+	'{ "type":"separator", "description":"BREAKFAST" },' +
+		'{ "type":"food", "name":"MASALA DOSA", "description":"Tomato sauce, mozzarella, organic oregano", "price":"100 kcal" },' +
+		'{ "type":"food", "name":"SAMBAR", "description":"Tomato sauce, mozzarella, ham, organic oregano", "price":"50 kcal" },' +
+		'{ "type":"food", "name":"CARROT CURRY", "description":"Tomato sauce, mozzarella, salami, organic oregano", "price":"80 kcal" },' +
+		'{ "type":"food", "name":"RASAM", "description":"Tomato sauce, mozzarella, tuna MSC, capers, organic oregano", "price":"90 kcal" },' +
+		'{ "type":"separator", "description":"RICE" },' +
+		'{ "type":"food", "name":"WHITE RICE", "description":"Beef entrecôte with herb butter, vegetables and  fries", "price":"100 kcal" },' +
+		'{ "type":"food", "name":"GHEE RICE", "description":"with café de paris herbs butter, fries and vegetables", "price":"120 kcal" },' +
+		'{ "type":"separator", "description":"DESSERT" },' +
+		'{ "type":"food", "name":"FRUIT SALAD", "description":"on spinach sauce with cherry tomatoes, fennel, feta and pine nuts", "price":"20 kcal" },' +
+    '{ "type":"drink", "name":"EGG PUFF", "description":"", "price":"35 kcal" },' +
 		'{ "type":"drink", "name":"COFFEE", "description":"", "price":"40 kcal" },' +
 		'{ "type":"drink", "name":"ENERGY DRINKS", "description":"", "price":"55 kcal" },' +
         '{ "type":"drink", "name":"MILK", "description":"", "price":"35 kcal" },' +
@@ -56,6 +143,9 @@ let startersbutton = document.getElementById("startersbutton");
 let mainsbutton = document.getElementById("mainsbutton");
 let dessertsbutton = document.getElementById("dessertsbutton");
 let drinksbutton = document.getElementById("drinksbutton");
+let fributton = document.getElementById("fributton");
+let satbutton = document.getElementById("satbutton");
+let sunbutton = document.getElementById("sunbutton");
 
 let ni1 = document.getElementById("ni1");
 let ni2 = document.getElementById("ni2");
@@ -78,6 +168,56 @@ drinksbutton.addEventListener("click", (e) => {
 	setIndicator(3);
 	populateItems(drinks);
 });
+fributton.addEventListener("click", (e) => {
+	setIndicator(4);
+	populateItems(Friday);
+});
+satbutton.addEventListener("click", (e) => {
+	setIndicator(5);
+	populateItems(Saturday);
+});
+sunbutton.addEventListener("click", (e) => {
+	setIndicator(6);
+	populateItems(Sunday);
+});
+
+
+const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+const menuData = {
+    Monday: starters,
+    Tuesday: mains,
+    Wednesday: desserts,
+    Thursday: drinks,
+    Friday: Friday,
+    Saturday: Saturday,
+    Sunday: Sunday
+};
+
+const buttons = [
+    startersbutton,
+    mainsbutton,
+    dessertsbutton,
+    drinksbutton,
+    fributton,
+    satbutton,
+    sunbutton
+];
+
+buttons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        setIndicator(index);
+        const day = daysOfWeek[index];
+        populateItems(menuData[day]);
+    });
+});
+
+
+
+
+
+
+
 
 function populateItems(items) {
 	let menu = document.querySelector(".menu");
@@ -153,6 +293,8 @@ window.addEventListener("resize", (e) => {
 	setIndicator(sl);
 });
 
-//default runs
-setIndicator(sl);
-populateItems(starters);
+
+// Default runs
+const defaultDayIndex = 0; // Adjust as needed, for example, if you want Monday as the default day
+setIndicator(defaultDayIndex);
+populateItems(menuData[daysOfWeek[defaultDayIndex]]);
